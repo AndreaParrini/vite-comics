@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --dc-primary: #0282f9;
+    --dc-light: white;
+    --dc-dark: #1c1c1c;
+    --dc-footer: #303030
+}
+
+.container {
+    width: 70%;
+    max-width: 1176;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.col {
+    width: auto;
+    flex-basis: auto;
+    padding: 1rem;
+    flex-grow: 1;
+}
