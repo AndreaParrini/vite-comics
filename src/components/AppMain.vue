@@ -51,6 +51,7 @@ main .content {
 main .link {
     background-color: var(--dc-primary);
     padding: 3rem 0;
+    position: relative;
 
     & .container {
         display: flex;
