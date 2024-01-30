@@ -1,6 +1,67 @@
 <script>
 export default {
-    name: 'AppHeader'
+    name: 'AppHeader',
+    data() {
+        return {
+            linkMenu: [
+                {
+                    text: 'Characters',
+                    link: '#',
+                    isActive: false
+                },
+                {
+                    text: 'Comics',
+                    link: '#',
+                    isActive: true
+                },
+                {
+                    text: 'Movies',
+                    link: '#',
+                    isActive: false
+                },
+                {
+                    text: 'Tv',
+                    link: '#',
+                    isActive: false
+                },
+                {
+                    text: 'Games',
+                    link: '#',
+                    isActive: false
+                },
+                {
+                    text: 'Collectibles',
+                    link: '#',
+                    isActive: false
+                },
+                {
+                    text: 'Videos',
+                    link: '#',
+                    isActive: false
+                },
+                {
+                    text: 'Characters',
+                    link: '#',
+                    isActive: false
+                },
+                {
+                    text: 'Fans',
+                    link: '#',
+                    isActive: false
+                },
+                {
+                    text: 'News',
+                    link: '#',
+                    isActive: false
+                },
+                {
+                    text: 'Shop',
+                    link: '#',
+                    isActive: false
+                }
+            ]
+        }
+    }
 }
 </script>
 
@@ -12,16 +73,10 @@ export default {
             </div>
             <nav>
                 <ul class="main_menu">
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#" class="active">Comics</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">Tv</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Collectibles</a></li>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">Fans</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Shop</a></li>
+                    <li v-for="link in     linkMenu    "><a href="{{ link.link }}" :class="{ active: link.isActive }">{{
+                        link.text
+                    }}</a>
+                    </li>
                 </ul>
             </nav>
         </div>
