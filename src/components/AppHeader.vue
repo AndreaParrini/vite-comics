@@ -73,7 +73,7 @@ export default {
             </div>
             <nav>
                 <ul class="main_menu">
-                    <li v-for="link in     linkMenu    "><a href="{{ link.link }}" :class="{ active: link.isActive }">{{
+                    <li v-for="link in      linkMenu     "><a :href='link.link' :class="{ active: link.isActive }">{{
                         link.text
                     }}</a>
                     </li>
