@@ -56,7 +56,7 @@ header {
                 text-decoration: none;
                 text-transform: uppercase;
                 color: var(--dc-dark);
-                padding: 2.5rem 0;
+                padding: 3.5rem 0;
                 font-weight: 600;
                 font-size: small;
             }
