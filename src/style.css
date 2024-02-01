@@ -34,3 +34,11 @@ body {
     padding: 1rem;
     flex-grow: 1;
 }
+
+[class^="col-"] {
+    padding: 1rem;
+}
+
+.col-2 {
+    width: calc((100% / 12) * 2);
+}

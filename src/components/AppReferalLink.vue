@@ -44,6 +44,7 @@ export default {
 
     & .col {
         display: flex;
+        justify-content: center;
 
         & img {
             max-height: 4rem;
