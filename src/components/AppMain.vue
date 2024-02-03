@@ -1,6 +1,7 @@
 <script>
 import AppReferalLink from './AppReferalLink.vue';
 import AppCardItem from './AppCardItem.vue';
+import AppBlueBox from './AppBlueBox.vue';
 
 export default {
     name: 'AppMain',
@@ -132,7 +133,8 @@ export default {
     },
     components: {
         AppReferalLink,
-        AppCardItem
+        AppCardItem,
+        AppBlueBox
     }
 }
 </script>
@@ -141,18 +143,14 @@ export default {
     <main>
         <section class="jumbotron">
             <div class="container">
-                <div class="box">
-                    <h4>Current Series</h4>
-                </div>
+                <AppBlueBox :text="'Current Series'"></AppBlueBox>
             </div>
         </section>
         <section class="content">
             <div class="container">
                 <div class="row">
-                    <AppCardItem :thumb="item.thumb" :series="item.series" v-for="item in items"></AppCardItem>
-                    <div class="btn">
-                        <h6>Load more</h6>
-                    </div>
+                    <AppCardItem :thumb="item.thumb" :series="item.series" v-for=" item  in  items "></AppCardItem>
+                    <AppBlueBox :text="'Load More'"></AppBlueBox>
                 </div>
             </div>
         </section>
@@ -162,6 +160,17 @@ export default {
 
 
 <style scoped>
+section.jumbotron {
+    min-height: 400px;
+    background-image: url('/img/jumbotron.jpg');
+
+    & .box {
+        width: 165px;
+        position: relative;
+        top: 380px;
+    }
+}
+
 main .content {
     background-color: var(--dc-dark);
     color: var(--dc-light);
@@ -169,28 +178,9 @@ main .content {
     font-weight: 700;
     padding: 3rem 0;
 
-    & .btn {
-        background-color: var(--dc-primary);
-        color: var(--dc-light);
-        /* width: 120px; */
-        padding: 0.5rem 1rem;
-        text-transform: uppercase;
-        margin: auto;
-    }
-}
-
-section.jumbotron {
-    min-height: 400px;
-    background-image: url('/img/jumbotron.jpg');
-
     & .box {
-        background-color: var(--dc-primary);
-        color: var(--dc-light);
-        width: 165px;
-        padding: 0.5rem 1rem;
-        text-transform: uppercase;
-        position: relative;
-        top: 380px;
+        margin: auto;
+        font-size: small;
     }
 }
 </style>
