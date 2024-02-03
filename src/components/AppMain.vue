@@ -168,14 +168,15 @@ main .content {
         background-color: var(--dc-primary);
         color: var(--dc-light);
         text-transform: uppercase;
-        padding: 0.5rem 1rem;
+        padding: 1rem 1rem;
     }
 
     & .title {
         width: 165px;
-        position: relative;
         font-size: medium;
-        bottom: 65px;
+        margin-top: -4.5rem;
+        margin-bottom: 2rem;
+        margin-left: 1rem;
     }
 
     & .btn {
