@@ -40,6 +40,8 @@ export default {
 
     & .container {
         display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
     }
 
     & .col {

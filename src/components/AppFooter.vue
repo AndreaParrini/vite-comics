@@ -54,9 +54,6 @@ export default {
                         </ul>
                     </div>
                 </div>
-                <div class="thumb">
-                    <img src="/img/dc-logo-bg.png" alt="">
-                </div>
             </div>
         </section>
 
@@ -85,8 +82,11 @@ export default {
 
 <style scoped>
 .section_links {
-    background-image: url(/img/footer-bg.jpg);
-    background-size: cover;
+    background-image: url(/img/dc-logo-bg.png), url(/img/footer-bg.jpg);
+    background-size: 300px, cover;
+    background-repeat: no-repeat;
+    background-size: 500px, cover;
+    background-position: 80%, top;
 
     & .container {
         display: flex;
@@ -95,11 +95,6 @@ export default {
 
     & .links {
         display: flex;
-    }
-
-    & img {
-        height: 400px;
-        overflow: hidden;
     }
 
     & h3 {
