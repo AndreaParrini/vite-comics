@@ -147,7 +147,7 @@ export default {
                 <h4 class="title box">Current Series</h4>
                 <div class="row">
                     <AppCardItem :thumb="item.thumb" :series="item.series" v-for=" item  in  items "></AppCardItem>
-                    <div class="btn box">Load more</div>
+                    <button class="box">Load more</button>
                 </div>
             </div>
         </section>
@@ -179,9 +179,10 @@ main .content {
         margin-left: 1rem;
     }
 
-    & .btn {
+    & button {
         margin: auto;
         font-size: small;
+        border-style: none;
     }
 }
 </style>
