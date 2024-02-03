@@ -139,10 +139,20 @@ export default {
 
 <template>
     <main>
+        <section class="jumbotron">
+            <div class="container">
+                <div class="box">
+                    <h4>Current Series</h4>
+                </div>
+            </div>
+        </section>
         <section class="content">
             <div class="container">
                 <div class="row">
                     <AppCardItem :thumb="item.thumb" :series="item.series" v-for="item in items"></AppCardItem>
+                    <div class="btn">
+                        <h6>Load more</h6>
+                    </div>
                 </div>
             </div>
         </section>
@@ -158,5 +168,29 @@ main .content {
     font-size: 1.5rem;
     font-weight: 700;
     padding: 3rem 0;
+
+    & .btn {
+        background-color: var(--dc-primary);
+        color: var(--dc-light);
+        /* width: 120px; */
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        margin: auto;
+    }
+}
+
+section.jumbotron {
+    min-height: 400px;
+    background-image: url('/img/jumbotron.jpg');
+
+    & .box {
+        background-color: var(--dc-primary);
+        color: var(--dc-light);
+        width: 165px;
+        padding: 0.5rem 1rem;
+        text-transform: uppercase;
+        position: relative;
+        top: 380px;
+    }
 }
 </style>
