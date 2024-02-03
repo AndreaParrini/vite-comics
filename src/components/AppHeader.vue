@@ -101,18 +101,19 @@ header {
 
     & .main_menu {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
 
         & li {
             list-style: none;
-            padding: 0 1rem;
+            padding: 0 0.7rem;
 
             & a {
                 text-decoration: none;
                 text-transform: uppercase;
                 color: var(--dc-dark);
                 padding: 3.5rem 0;
-                font-weight: 600;
+                font-weight: 500;
                 font-size: small;
             }
 

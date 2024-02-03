@@ -23,6 +23,8 @@ export default {
 img {
     max-width: 100%;
     aspect-ratio: 1;
+    object-fit: cover;
+    object-position: top;
 }
 
 h6 {

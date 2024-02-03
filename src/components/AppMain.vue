@@ -1,7 +1,7 @@
 <script>
 import AppReferalLink from './AppReferalLink.vue';
 import AppCardItem from './AppCardItem.vue';
-import AppBlueBox from './AppBlueBox.vue';
+import AppJumbotron from './AppJumbotron.vue';
 
 export default {
     name: 'AppMain',
@@ -134,23 +134,20 @@ export default {
     components: {
         AppReferalLink,
         AppCardItem,
-        AppBlueBox
+        AppJumbotron
     }
 }
 </script>
 
 <template>
     <main>
-        <section class="jumbotron">
-            <div class="container">
-                <AppBlueBox :text="'Current Series'"></AppBlueBox>
-            </div>
-        </section>
+        <AppJumbotron></AppJumbotron>
         <section class="content">
             <div class="container">
+                <h4 class="title box">Current Series</h4>
                 <div class="row">
                     <AppCardItem :thumb="item.thumb" :series="item.series" v-for=" item  in  items "></AppCardItem>
-                    <AppBlueBox :text="'Load More'"></AppBlueBox>
+                    <div class="btn box">Load more</div>
                 </div>
             </div>
         </section>
@@ -160,17 +157,6 @@ export default {
 
 
 <style scoped>
-section.jumbotron {
-    min-height: 400px;
-    background-image: url('/img/jumbotron.jpg');
-
-    & .box {
-        width: 165px;
-        position: relative;
-        top: 380px;
-    }
-}
-
 main .content {
     background-color: var(--dc-dark);
     color: var(--dc-light);
@@ -179,6 +165,20 @@ main .content {
     padding: 3rem 0;
 
     & .box {
+        background-color: var(--dc-primary);
+        color: var(--dc-light);
+        text-transform: uppercase;
+        padding: 0.5rem 1rem;
+    }
+
+    & .title {
+        width: 165px;
+        position: relative;
+        font-size: medium;
+        bottom: 65px;
+    }
+
+    & .btn {
         margin: auto;
         font-size: small;
     }
