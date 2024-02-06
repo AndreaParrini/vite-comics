@@ -20,11 +20,21 @@ export default {
 
 
 <style scoped>
+.card:hover {
+    transform: scale(1.1);
+
+    cursor: pointer;
+}
+
 img {
     max-width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
     object-position: top;
+
+    &:hover {
+        filter: drop-shadow(0 0 5px var(--dc-light));
+    }
 }
 
 h6 {

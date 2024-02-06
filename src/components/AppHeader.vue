@@ -115,12 +115,18 @@ header {
                 padding: 3.5rem 0;
                 font-weight: 500;
                 font-size: small;
+
+                &:hover {
+                    border-bottom: 5px solid var(--dc-primary);
+                }
             }
 
             & a.active {
                 color: var(--dc-primary);
                 border-bottom: 5px solid var(--dc-primary);
             }
+
+
         }
     }
 
